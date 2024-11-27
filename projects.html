@@ -8,6 +8,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="icon" href="img/perfil.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,15 +17,36 @@
     <div class="top-bar">
       <p class="name">JOÃO V. PASSOS</p>
       <div class="button-container">
-        <a href="index.html" class="top-button">Home</a>
-        <a href="projects.html" class="top-button active">Projects</a>
-        <a href="links.html" class="top-button">Links</a>
+        <div class="pages">
+          <a href="index.html" class="top-button">Home</a>
+          <a href="projects.html" class="top-button active">Projects</a>
+          <a href="links.html" class="top-button">Links</a>
+        </div>
       </div>
+      <button class="top-button" id="mode">Dark Mode</button>
     </div>
 
     <hr class="top-divider">
 
+    <h4 class="project-item"><a href="https://github.com/iampassos/dotfiles" target="_blank" class="link"><i
+          class="fab fa-github"></i></a> Dotfiles
+    </h4>
+    <p class="normal-text">This is a repository with all my configuration files I need in my development environment.
+      Including NeoVim and
+      Fedora, my current Linux distro.</p>
+
+    <h4 class="project-item"><a href="https://github.com/iampassos/states-at-war" target="_blank" class="link"><i
+          class="fab fa-github"></i></a> States at War
+    </h4>
+    <p class="normal-text">A game inspired by the famous "War" game (that's how it is called in Brazil). However,
+      instead of a global war,
+      this game focuses on all brazilian states. It's an unfinished project still, and I'm using this as a fun way to go
+      in-depth in C and low-level memory management.</p>
   </div>
+
+  <footer>
+    Soli Deo Gloria — To God alone be the glory.
+  </footer>
 
   <script src="script.js"></script>
 </body>

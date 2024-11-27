@@ -1,3 +1,8 @@
+:root {
+  --secondary-text-dark-mode: #CCCCCC;
+  --dark-mode-active: #FF5722;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -7,6 +12,14 @@ body {
   margin: 0;
   font-family: Roboto, sans-serif;
   text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+  color: black;
+  background-color: white;
+}
+
+body.dark-mode {
+  background-color: #1E1E1E;
+  color: white;
 }
 
 .top-bar {
@@ -21,6 +34,23 @@ body {
   font-weight: bold;
   font-family: outfit;
   color: black;
+  flex: 0 1 auto;
+}
+
+.name.dark-mode {
+  color: white
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 .top-button {
@@ -34,6 +64,10 @@ body {
   transition: color 0.3s;
 }
 
+.top-button.dark-mode {
+  color: var(--secondary-text-dark-mode)
+}
+
 .top-button:hover {
   color: #007BFF;
 }
@@ -42,10 +76,21 @@ body {
   color: #007BFF;
 }
 
+.top-button.dark-mode:hover {
+  color: var(--dark-mode-active)
+}
+
+.top-button.dark-mode.active {
+  color: var(--dark-mode-active)
+}
+
+
+
 .container {
   padding: 20px;
   border-radius: 10px;
   max-width: 600px;
+  width: 100%
 }
 
 h4 {
@@ -54,8 +99,50 @@ h4 {
   font-weight: 500;
 }
 
-p {
+.normal-text {
   margin: 15px 0;
   text-align: justify;
   color: #333333;
+}
+
+.normal-text.dark-mode {
+  color: var(--secondary-text-dark-mode);
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: gray;
+}
+
+.top-divider {
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25%;
+}
+
+.links h4 {
+  margin: 10px
+}
+
+.link.dark-mode {
+  color: white;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  font-size: 14px;
+  color: #99a1af;
+  bottom: 15%;
 }
