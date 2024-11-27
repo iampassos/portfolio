@@ -1,6 +1,7 @@
 :root {
   --secondary-text-dark-mode: #CCCCCC;
   --dark-mode-active: #FF5722;
+  --light-mode-active: #007BFF;
 }
 
 body {
@@ -69,11 +70,11 @@ body.dark-mode {
 }
 
 .top-button:hover {
-  color: #007BFF;
+  color: var(--light-mode-active);
 }
 
 .top-button.active {
-  color: #007BFF;
+  color: var(--light-mode-active);
 }
 
 .top-button.dark-mode:hover {
@@ -83,8 +84,6 @@ body.dark-mode {
 .top-button.dark-mode.active {
   color: var(--dark-mode-active)
 }
-
-
 
 .container {
   padding: 20px;
@@ -116,7 +115,7 @@ h4 {
 }
 
 .link:hover {
-  color: gray;
+  color: var(--light-mode-active);
 }
 
 .top-divider {
@@ -137,6 +136,10 @@ h4 {
 
 .link.dark-mode {
   color: white;
+}
+
+.link.dark-mode:hover {
+  color: var(--dark-mode-active)
 }
 
 footer {
